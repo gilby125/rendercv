@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  rendercv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    command: ["python", "-m", "rendercv"]
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    command: ["pytest"]
+    environment:
+      - PYTHONUNBUFFERED=1
+
+volumes:
+  app:
