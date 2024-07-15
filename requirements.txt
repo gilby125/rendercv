@@ -1,0 +1,10 @@
+pydantic
+PyYAML
+Jinja2
+pypdf
+pytest
+pathlib
+typing
+itertools
+shutil
+json
