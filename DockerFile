@@ -9,5 +9,4 @@ COPY . .
 
 ENV PYTHONPATH=/app
 
-
 CMD ["python", "-m", "rendercv"]
